@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mırra Kahve & Fırın | Moda, Kadıköy</title>
+<meta name="description" content="Moda'da yavaş demlenen kahve ve sabah fırından çıkan hamur işleri.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&display=swap" rel="stylesheet">
+
+
+<style>
+  /* 1) RENKLER: Hepsi burada. Müşterinin markasına göre sadece bunları değiştir. */
+  :root{
+    --mavi:#1c3d8f;      /* ana renk */
+    --sari:#f3b73a;      /* vurgu rengi */
+    --kagit:#f6f4ee;     /* sayfa zemini */
+    --murekkep:#14224a;  /* yazı rengi */
+  }
+
+  *{box-sizing:border-box;margin:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--kagit);color:var(--murekkep);line-height:1.6}
+  h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.05}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--sari);outline-offset:3px}
+  .sar{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  /* 2) HERO: solda başlık, sağda "menü tahtası" */
+  .hero{background:var(--mavi);color:var(--kagit);padding:56px 0 64px}
+  .hero .sar{display:grid;gap:40px;grid-template-columns:1.1fr .9fr;align-items:center}
+  .marka{font-weight:500;margin-bottom:28px}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800;letter-spacing:-.02em}
+  .hero p{margin-top:20px;max-width:34ch;font-size:1.1rem;opacity:.92}
+  .btn{display:inline-block;margin-top:28px;padding:14px 24px;border-radius:999px;background:var(--sari);color:var(--murekkep);font-weight:700;text-decoration:none}
+  .btn:hover{filter:brightness(1.07)}
+
+  .tahta{background:var(--kagit);color:var(--murekkep);border-radius:6px;padding:28px 26px;transform:rotate(1.5deg);box-shadow:8px 8px 0 var(--sari)}
+  .tahta h2{font-size:1.5rem;margin-bottom:14px}
+  .tahta ul{list-style:none;padding:0}
+  .tahta li{display:flex;gap:8px;align-items:baseline;padding:7px 0}
+  .tahta li::after{content:"";order:2;flex:1;border-bottom:2px dotted rgba(20,34,74,.35)}
+  .tahta li span:last-child{order:3;font-weight:700}
+
+  /* 3) BÖLÜMLER */
+  section.b{padding:64px 0}
+  section.b h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:24px}
+  .firin{display:grid;gap:28px;grid-template-columns:repeat(3,1fr)}
+  .firin h3{font-size:1.25rem;margin-bottom:6px}
+  .firin p{max-width:30ch}
+  .bilgi{background:#fff;border-top:6px solid var(--sari)}
+  .bilgi .sar{display:grid;gap:40px;grid-template-columns:1fr 1fr}
+  .bilgi dl{display:grid;grid-template-columns:auto 1fr;gap:6px 24px}
+  .bilgi dt{font-weight:700}
+  footer{background:var(--murekkep);color:var(--kagit);padding:28px 0;font-size:.95rem}
+
+  /* 4) SABİT WHATSAPP BUTONU: siparişi/rezervasyonu kolaylaştırır */
+  .wp{position:fixed;right:16px;bottom:16px;padding:12px 18px;border-radius:999px;background:#25d366;color:#0b2e1a;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+
+  /* 5) MOBİL: ekran dar olunca tek sütun */
+  @media (max-width:760px){
+    .hero .sar,.bilgi .sar,.firin{grid-template-columns:1fr}
+    .tahta{transform:none}
+  }
+</style>
+
+
+</head>
+<body>
+
+<header class="hero">
+  <div class="sar">
+    <div>
+      <div class="marka">Mırra Kahve &amp; Fırın</div>
+      <h1>Acele yok. Kahve demleniyor.</h1>
+      <p>Moda'da, sabah fırından çıkan hamur işleri ve elde demlenen kahve.</p>
+      <!-- Aşağıdaki numarayı kendi (veya müşterinin) numarasıyla değiştir, başında 90 olsun -->
+      <a class="btn" href="https://wa.me/905550000000?text=Merhaba%2C%20masa%20ay%C4%B1rtmak%20istiyorum">WhatsApp'tan masa ayırt</a>
+    </div>
+
+    <aside class="tahta" aria-label="Menü">
+      <h2>Bugünün menüsü</h2>
+      <ul>
+        <li><span>Türk kahvesi</span><span>70 ₺</span></li>
+        <li><span>Filtre kahve</span><span>95 ₺</span></li>
+        <li><span>Süt köpüklü latte</span><span>115 ₺</span></li>
+        <li><span>Soğuk demleme</span><span>110 ₺</span></li>
+        <li><span>Tahinli çörek</span><span>85 ₺</span></li>
+        <li><span>Poğaça</span><span>60 ₺</span></li>
+      </ul>
+    </aside>
+  </div>
+</header>
+
+<section class="b" id="firin">
+  <div class="sar">
+    <h2>Sabah fırından</h2>
+    <div class="firin">
+      <div><h3>Tahinli çörek</h3><p>Her sabah 07.30'da, tahin ve kavrulmuş susamla.</p></div>
+      <div><h3>Peynirli poğaça</h3><p>Beyaz peynir ve maydanozla, sıcak servis edilir.</p></div>
+      <div><h3>Zeytinli ekmek</h3><p>Ekşi mayalı, dilimlenmiş ya da bütün satılır.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="b bilgi" id="bilgi">
+  <div class="sar">
+    <div>
+      <h2>Gel, otur</h2>
+      <dl>
+        <dt>Adres</dt><dd>Moda Cd. 24, Kadıköy, İstanbul</dd>
+        <dt>Hafta içi</dt><dd>07.30 – 22.00</dd>
+        <dt>Hafta sonu</dt><dd>08.30 – 23.00</dd>
+        <dt>Telefon</dt><dd><a href="tel:+905550000000">0555 000 00 00</a></dd>
+      </dl>
+    </div>
+    <div>
+      <h2>Rezervasyon</h2>
+      <p>6 kişiye kadar masalar için WhatsApp'tan yazman yeterli. Aynı gün içinde dönüyoruz.</p>
+      <a class="btn" href="https://wa.me/905550000000">Mesaj gönder</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="sar">© 2026 Mırra Kahve &amp; Fırın · Instagram: <a href="#">@mirrakahve</a></div>
+</footer>
+
+<a class="wp" href="https://wa.me/905550000000" aria-label="WhatsApp ile yaz">WhatsApp</a>
+
+</body>
+</html>
